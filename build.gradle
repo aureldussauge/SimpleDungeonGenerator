@@ -1,0 +1,13 @@
+group 'com.mursaat.dungeongenerator'
+version '0.1'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
