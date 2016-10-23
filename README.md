@@ -1,7 +1,7 @@
 # SimpleDungeonGenerator
 
 This library allows to generator simple dungeons map.<br>
-It uses the algorithm described here :<br>
+It's based on the algorithm described here :<br>
 http://www.gamasutra.com/blogs/AAdonaac/20150903/252889/Procedural_Dungeon_Generation_Algorithm.php<br>
 https://www.reddit.com/r/gamedev/comments/1dlwc4/procedural_dungeon_generation_algorithm_explained/<br>
 
