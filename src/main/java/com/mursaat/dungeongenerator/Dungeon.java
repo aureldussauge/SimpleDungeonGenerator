@@ -72,4 +72,21 @@ public class Dungeon {
 	public int getHeight() {
 		return height;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder stringBuilder = new StringBuilder();
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				if (tiles[y][x] instanceof DungeonRoom)
+					stringBuilder.append('X');
+				else if (tiles[y][x] instanceof DungeonHallway)
+					stringBuilder.append('O');
+				else
+					stringBuilder.append(' ');
+			}
+			stringBuilder.append('\n');
+		}
+		return stringBuilder.toString();
+	}
 }

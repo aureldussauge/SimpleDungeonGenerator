@@ -136,7 +136,7 @@ public class DungeonGenerator {
 		// Create the tiled map
 		dungeon.tiles = new DungeonStructure[dungeon.height][dungeon.width];
 
-		for (DungeonRoom room : rooms) {
+		for (DungeonRoom room : dungeon.rooms) {
 			Position roomPosition = room.getPosition();
 
 			int yRoomMax = roomPosition.y + room.getHeight();

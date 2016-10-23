@@ -17,6 +17,7 @@ public class DungeonGeneratorTest {
 
 	@Test
 	public void generateDungeon() throws Exception {
-		new DungeonGenerator().generateDungeon();
+		Dungeon dungeon = new DungeonGenerator().generateDungeon();
+		System.out.println(dungeon);
 	}
 }
