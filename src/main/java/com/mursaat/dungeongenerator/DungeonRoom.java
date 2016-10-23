@@ -2,101 +2,100 @@ package com.mursaat.dungeongenerator;
 
 public class DungeonRoom implements DungeonStructure {
 
-  public enum RoomType {
-    MAIN_ROOM,
-    HALLWAY_ROOM
-  }
+	private static int nextIdToGive = 1;
+	private int id;
+	private Position position;
+	private int width;
+	private int height;
+	private RoomType type;
 
-  private static int nextIdToGive = 1;
+	public DungeonRoom() {
+		id = nextIdToGive++;
+		type = RoomType.HALLWAY_ROOM;
+		position = new Position();
+	}
 
-  private int id;
-  private Position position;
-  private int width;
-  private int height;
-  private RoomType type;
+	public Position getPosition() {
+		return position;
+	}
 
-  public DungeonRoom() {
-    id = nextIdToGive++;
-    type = RoomType.HALLWAY_ROOM;
-    position = new Position();
-  }
+	public void setPosition(Position position) {
+		this.position = position;
+	}
 
-  public Position getPosition() {
-    return position;
-  }
+	public int getWidth() {
+		return width;
+	}
 
-  public int getWidth() {
-    return width;
-  }
+	public DungeonRoom setWidth(int width) {
+		this.width = width;
+		return this;
+	}
 
-  public DungeonRoom setWidth(int width) {
-    this.width = width;
-    return this;
-  }
+	public int getId() {
+		return id;
+	}
 
-  public int getId() {
-    return id;
-  }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-  public void setId(int id) {
-    this.id = id;
-  }
+	public RoomType getType() {
+		return type;
+	}
 
-  public void setPosition(Position position) {
-    this.position = position;
-  }
+	public void setType(RoomType type) {
+		this.type = type;
+	}
 
-  public RoomType getType() {
-    return type;
-  }
+	public int getHeight() {
+		return height;
+	}
 
-  public void setType(RoomType type) {
-    this.type = type;
-  }
+	public DungeonRoom setHeight(int height) {
+		this.height = height;
+		return this;
+	}
 
-  public int getHeight() {
-    return height;
-  }
+	public int getX() {
+		return position.x;
+	}
 
-  public DungeonRoom setHeight(int height) {
-    this.height = height;
-    return this;
-  }
+	public DungeonRoom setX(int x) {
+		position.x = x;
+		return this;
+	}
 
-  public int getX() {
-    return position.x;
-  }
+	public int getY() {
+		return position.y;
+	}
 
-  public int getY() {
-    return position.y;
-  }
+	public DungeonRoom setY(int y) {
+		position.y = y;
+		return this;
+	}
 
-  public DungeonRoom setX(int x) {
-    position.x = x;
-    return this;
-  }
+	public Position getCenterPosition() {
+		return new Position(position.x + width / 2, position.y + height / 2);
+	}
 
-  public DungeonRoom setY(int y) {
-    position.y = y;
-    return this;
-  }
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
 
-  public Position getCenterPosition() {
-    return new Position(position.x + width / 2, position.y + height / 2);
-  }
+		DungeonRoom room = (DungeonRoom) o;
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+		return id == room.id;
+	}
 
-    DungeonRoom room = (DungeonRoom) o;
+	@Override
+	public int hashCode() {
+		return id;
+	}
 
-    return id == room.id;
-  }
-
-  @Override
-  public int hashCode() {
-    return id;
-  }
+	public enum RoomType {
+		MAIN_ROOM,
+		HALLWAY_ROOM
+	}
 }

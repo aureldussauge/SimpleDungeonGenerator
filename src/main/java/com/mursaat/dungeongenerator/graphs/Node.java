@@ -7,28 +7,28 @@ import com.mursaat.dungeongenerator.DungeonRoom;
  * room)
  */
 public class Node {
-  private DungeonRoom room;
+	private DungeonRoom room;
 
-  public Node(DungeonRoom room) {
-    this.room = room;
-  }
+	public Node(DungeonRoom room) {
+		this.room = room;
+	}
 
-  public DungeonRoom getRoom() {
-    return room;
-  }
+	public DungeonRoom getRoom() {
+		return room;
+	}
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
 
-    Node node = (Node) o;
+		Node node = (Node) o;
 
-    return room != null ? room.equals(node.room) : node.room == null;
-  }
+		return room != null ? room.equals(node.room) : node.room == null;
+	}
 
-  @Override
-  public int hashCode() {
-    return room != null ? room.hashCode() : 0;
-  }
+	@Override
+	public int hashCode() {
+		return room != null ? room.hashCode() : 0;
+	}
 }

@@ -1,3 +1,4 @@
 package com.mursaat.dungeongenerator;
 
-public interface DungeonStructure {}
+public interface DungeonStructure {
+}
