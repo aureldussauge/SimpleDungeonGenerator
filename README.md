@@ -8,9 +8,9 @@ https://www.reddit.com/r/gamedev/comments/1dlwc4/procedural_dungeon_generation_a
 Latest release
 ---------------
 
-The most recent release is v0.0.1, released October 23, 2016
+The most recent release is v0.0.2, released October 24, 2016
 
-You can get the .jar here : https://github.com/Mursaat/SimpleDungeonGenerator/releases/tag/v0.0.1
+You can get the .jar here : https://github.com/Mursaat/SimpleDungeonGenerator/releases/tag/v0.0.2
 
 To add a dependency using Gradle:
 ```
@@ -19,7 +19,7 @@ repositories {
 	maven { url "https://jitpack.io" }
 }
 dependencies {
-	compile 'com.github.mursaat:simpledungeongenerator:v0.0.1'
+	compile 'com.github.mursaat:simpledungeongenerator:v0.0.2'
 }
 ```
 
